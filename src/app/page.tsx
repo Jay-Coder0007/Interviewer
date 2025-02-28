@@ -19,13 +19,13 @@ export default function Home() {
       <nav className="absolute top-0 w-full p-6">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-            AI Interview Pro
+            SmartHire
           </div>
-          <div className="hidden md:flex gap-8">
+          {/* <div className="hidden md:flex gap-8">
             <a href="#features" className="hover:text-purple-400 transition-colors">Features</a>
             <a href="#about" className="hover:text-purple-400 transition-colors">About</a>
             <a href="#contact" className="hover:text-purple-400 transition-colors">Contact</a>
-          </div>
+          </div> */}
         </div>
       </nav>
 
