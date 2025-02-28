@@ -8,11 +8,19 @@ if (!fs.existsSync(publicDir)) {
 }
 
 // Updated path for newer versions of pdfjs-dist
-const workerPath = path.join(
-  path.dirname(require.resolve('pdfjs-dist/package.json')),
-  'build',
-  'pdf.worker.min.js'
-);
+// const workerPath = path.join(
+//   path.dirname(require.resolve('pdfjs-dist/package.json')),
+//   'build',
+//   'pdf.worker.min.js'
+// );
+import { GlobalWorkerOptions } from "pdfjs-dist";
+
+// Dynamically resolve the worker path
+GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.js",
+  import.meta.url
+).toString();
+
 const destinationPath = path.join(__dirname, '../public/pdf.worker.min.js');
 
 try {
