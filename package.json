@@ -12,6 +12,7 @@
     "@google/generative-ai": "^0.2.0",
     "interviewer": "file:",
     "next": "^15.2.0",
+    "pdfjs-dist": "^4.10.38",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
