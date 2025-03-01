@@ -155,7 +155,7 @@ export interface ResumeData {
 export const generateInterviewQuestions = async (resumeData: any, jobRole: string) => {
   try {
     const prompt = `
-      As an expert interviewer, generate 15 technical interview questions based on the following resume data and job role.
+      As an expert interviewer, generate 5 technical interview questions based on the following resume data and job role.
       The questions should be relevant to the candidate's experience, skills, and the job role they're applying for.
       
       Job Role: ${jobRole}
@@ -176,11 +176,12 @@ export const generateInterviewQuestions = async (resumeData: any, jobRole: strin
       }
       
       Requirements:
-      1. Questions should be mix of technical and role-specific
-      2. Include questions about their past projects and experience
-      3. Vary the difficulty levels
-      4. Make questions specific to their skills and background
-      5. Include some problem-solving questions
+      1. Generate exactly 5 questions
+      2. Questions should be mix of technical and role-specific
+      3. Include questions about their past projects and experience
+      4. Vary the difficulty levels (2 Easy, 2 Medium, 1 Hard)
+      5. Make questions specific to their skills and background
+      6. Include at least one problem-solving question
       
       Return only the JSON object without any additional text or formatting.
     `;
