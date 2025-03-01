@@ -12,7 +12,7 @@ A modern web application designed to help manage and streamline the interview pr
 - User-friendly interface
 
 ## Tech Stack
-- Frontend: React.js
+- Frontend: next.js
 - Backend: Node.js
 - Database: MongoDB
 - Styling: Tailwind CSS
